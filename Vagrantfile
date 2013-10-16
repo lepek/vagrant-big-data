@@ -3,6 +3,7 @@
 
 Vagrant::Config.run do |config|
   config.vm.box = "base-hadoop"
+  config.vm.box_url = "https://dl.dropboxusercontent.com/u/547671/thinkstack-raring64.box"
   config.vm.provision :puppet do |puppet|
      puppet.manifests_path = "manifests"
      puppet.manifest_file  = "base-hadoop.pp"
