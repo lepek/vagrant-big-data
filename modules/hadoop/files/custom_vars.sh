@@ -4,4 +4,4 @@ export HADOOP_PREFIX=/usr/lib/hadoop
 export HADOOP_MAPRED_HOME=/usr/lib/hadoop
 export PIG_CLASSPATH=/usr/lib/hadoop/conf
 export PIG_HOME=/usr/lib/pig
-export PATH=$SQOOP_HOME/bin:$PIG_HOME/bin:$PATH
+export PATH=$SQOOP_HOME/bin:$PIG_HOME/bin:$HADOOP_PREFIX/bin:$PATH

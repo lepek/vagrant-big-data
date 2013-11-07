@@ -51,4 +51,11 @@ class sqoop {
     require => Exec["unpack_sqoop"]
   }
 
+  exec { "set_owner_sqoop":
+    command => "chown -R vagrant:vagrant /opt/${sqoop}", 
+    path => $path,
+    logoutput => "on_failure",
+    require => Exec["symlink_sqoop"]
+  }
+
 }

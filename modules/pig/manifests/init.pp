@@ -25,4 +25,11 @@ class pig {
     require => Exec["unpack_pig"]
   }
 
+  exec { "set_owner_pig":
+    command => "chown -R vagrant:vagrant /opt/${pig}", 
+    path => $path,
+    logoutput => "on_failure",
+    require => Exec["symlink_pig"]
+  }
+
 }

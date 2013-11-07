@@ -1,9 +1,12 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
- <configuration>
-  <property>
-   <name>fs.default.name</name>
-   <value>hdfs://192.168.1.10:9000</value>
-   <description>The name of the default file system. A URI whose scheme and authority determine the FileSystem implementation.</description>
-  </property>
- </configuration>
+<configuration>
+	<property>
+		<name>fs.default.name</name>
+		<value>hdfs://localhost:9000</value>
+	</property>
+	<property>
+		<name>hadoop.tmp.dir</name>
+		<value>/opt/hadoop-1.2.0/data</value>
+	</property>
+</configuration>
