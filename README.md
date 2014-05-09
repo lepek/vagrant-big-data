@@ -19,9 +19,13 @@ Installed versions are:
       - ```cd vagrant-big-data```
       - ```vagrant up```
       - ```vagrant ssh master```
-- Set up and start Hadoop:
-      - ```sudo su - root```
+- Set up Hadoop:
+      - ```sudo su - root``` Switch to the root user
+      - ``` passwd ``` Change the root password
       - ```cd /opt/hadoop-1.2.0/bin```
-      - ```./hadoop namenode -format```
+      - ```./hadoop namenode -format``` Format the HDFS filesystem
+- Start the Hadoop processes (you will need to do this each time you restart the Vagrant VM):
+      - ```./start-all.sh```
+      
 
 This is inspired in vagrant-hadoop (https://github.com/rkrol/vagrant-hadoop)
